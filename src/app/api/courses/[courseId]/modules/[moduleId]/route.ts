@@ -32,7 +32,8 @@ export async function POST(
         { status: 400 }
       );
     }
-    const newChapter = await prisma.chapters.create({
+
+    const newChapter = await prisma.chapter.create({
       data: {
         name,
         resourceId,

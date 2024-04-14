@@ -16,14 +16,14 @@ model Course {
 }
 
 model CourseModule {
-  id       String     @id @default(cuid())
+  id       String    @id @default(cuid())
   name     String
   courseId String
-  course   Course     @relation(fields: [courseId], references: [id])
-  chapters chapters[]
+  course   Course    @relation(fields: [courseId], references: [id])
+  chapters Chapter[]
 }
 
-model chapters {
+model Chapter {
   id           String       @id @default(cuid())
   name         String
   resourceId   String

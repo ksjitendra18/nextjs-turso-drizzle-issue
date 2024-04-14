@@ -11,7 +11,7 @@ const ModulesPage = async ({
 }: {
   params: { courseId: string; moduleId: string };
 }) => {
-  const allChapters = await prisma.chapters.findMany({
+  const allChapters = await prisma.chapter.findMany({
     where: {
       moduleId: params.moduleId,
     },
